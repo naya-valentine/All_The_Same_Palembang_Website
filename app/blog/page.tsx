@@ -1,4 +1,5 @@
-import { Header } from '@/app/components/header'
+import  Header  from '@/app/components/header'
+import  Footer  from '@/app/components/footer'
 import React from 'react'
 import blogs from '@/app/blog/blogContent.json'
 import Link from 'next/link'
@@ -23,6 +24,7 @@ export default function BlogPage() {
                         ))}
                     </ul>
                 </div>
+                <Footer />
             </div>
         </>
     )
