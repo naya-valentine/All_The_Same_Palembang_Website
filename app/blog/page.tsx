@@ -1,6 +1,7 @@
 import { Header } from '@/app/components/header'
 import React from 'react'
 import blogs from '@/app/blog/blogContent.json'
+import Link from 'next/link'
 export default function BlogPage() {
     return(
         <>
@@ -13,11 +14,11 @@ export default function BlogPage() {
                 <div className='blogGrid'>
                     <ul>
                         {blogs.map((blog)=> (
-                        <li key={blog.id}>
-                            <a href=''>
+                        <li class='blogButton'>
+                            <Link href = {`/blog/${blog.id}`}>
                                 <h3>{blog.title}</h3>
                                 <img src={blog.image} alt={blog.title}/>
-                            </a>
+                            </Link>
                         </li>
                         ))}
                     </ul>
@@ -26,3 +27,4 @@ export default function BlogPage() {
         </>
     )
 }
+
