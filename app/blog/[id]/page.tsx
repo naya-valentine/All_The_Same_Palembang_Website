@@ -16,8 +16,8 @@ export default async function BlogContentPage({ params }: {params: Promise<{id: 
             <div className='textBox'>
                 {text.map((para, index)=> (
                     <div className='section' key={index}>
-                        <h2>{para.heading}</h2>
-                        <p>{para.text}</p>
+                        <h2 className='heading'>{para.heading}</h2>
+                        <p className='contentText'>{para.body}</p>
                     </div>
                 ))}
             </div>
